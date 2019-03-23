@@ -9,7 +9,7 @@ const banner = `/**
 `;
 
 module.exports = {
-  name: 'vue-good-table',
+  name: 'vue-table-draggable',
   banner,
   format: [
     'cjs',
@@ -20,7 +20,7 @@ module.exports = {
   compress: 'umd',
   plugins: ['vue'],
   vue: {
-    css: 'dist/vue-good-table.css',
+    css: 'dist/vue-table-draggable.css',
     cssSourceMap: false,
   },
   buble: {

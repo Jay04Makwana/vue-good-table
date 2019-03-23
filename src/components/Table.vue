@@ -323,7 +323,7 @@ import VgtGlobalSearch from './VgtGlobalSearch.vue';
 import VgtTableHeader from './VgtTableHeader.vue';
 import VgtHeaderRow from './VgtHeaderRow.vue';
 import Draggable from '@shopify/draggable/lib/draggable';
-import { Sortable } from '@shopify/draggable'
+import Sortable from '@shopify/draggable/lib/sortable';
 
 // here we load each data type module.
 import * as CoreDataTypes from './types/index';
@@ -1479,6 +1479,18 @@ export default {
     //     this.handleDefaultSort();
     //   }
     // },
+    arrayMove (items, oldIndex, newIndex) {
+      const itemRemovedArray = [
+        ...items.slice(0, oldIndex),
+        ...items.slice(oldIndex + 1, items.length)
+      ]
+
+      return [
+        ...itemRemovedArray.slice(0, newIndex),
+        items[oldIndex],
+        ...itemRemovedArray.slice(newIndex, itemRemovedArray.length)
+      ]
+    },
   },
 
   mounted() {

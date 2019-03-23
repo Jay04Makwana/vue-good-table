@@ -1,15 +1,15 @@
-import VueGoodTable from './components/Table.vue';
+import VueTableDraggable from './components/Table.vue';
 
-const VueGoodTablePlugin = {
+const VueTableDraggablePlugin = {
   install(Vue, options) {
-    Vue.component(VueGoodTable.name, VueGoodTable);
+    Vue.component(VueTableDraggable.name, VueTableDraggable);
   },
 };
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueGoodTablePlugin);
+  window.Vue.use(VueTableDraggablePlugin);
 }
 
-export default VueGoodTablePlugin;
-export { VueGoodTable };
+export default VueTableDraggablePlugin;
+export { VueTableDraggable };
